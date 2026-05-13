@@ -6,7 +6,7 @@ install.packages("tidyverse")
 library(tidyverse)
 
 # 2. Importar datos
-# El archivo 'climate70.csv' deber estar en la carpeta 'data'
+# El archivo 'climate70.csv' debe estar en la carpeta 'data'
 datos_clima <- read.csv("climate70.csv") #para que esta línea funcione se debe usar la opción "Set Working Directory" en R
 
 
