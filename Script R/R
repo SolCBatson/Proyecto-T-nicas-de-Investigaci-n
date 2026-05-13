@@ -14,11 +14,12 @@ datos_clima <- read.csv("climate70.csv") #para que la opción funcione se debe u
 #Seleccionamos "Choose Directory"
 #Escojemos el directorio
 
-
 # 3. Análisis de los datos
 # Se realiza una preuba de T para muestras pareadas ya que son datos de las mismas localidades pero en diferentes años
+
 # H0: La diferencia de medias entre 2018 y 1948 es igual a 0.
 # H1: La diferencia de medias es distinta de 0.
+
 t_test_70 <- t.test(datos$dx70_1948, datos$dx70_2018, paired = TRUE)
 print(t_test_70)
 
@@ -52,16 +53,21 @@ boxplot(DIAS ~ AÑO, data = f_90,
 # 6. Graficamos un violin 
 p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
   geom_violin() +
-  labs(title = "Violin Plot de la distribución de días >70°F en 1948 vs. 2018",
+  labs(title = "Distribución de días >70 °F en 1948 vs 2018",
        x = "Año", y = "Días > 70°F") +
   scale_fill_manual(values = c("lightblue", "lightgreen")) 
 
 p  + stat_summary(fun.y=mean, geom="point", size=2, color="red")
 g<-ggplot(f_90, aes(x = AÑO, y = DIAS, fill = AÑO)) +
   geom_violin() +
-  labs(title = "Violin Plot de la distribución de días >90°F en 1948 vs. 2018",
+  labs(title = "Distribución de días >90 °F en 1948 vs. 2018",
        x = "Año", y = "Días > 90°F") +
   scale_fill_manual(values = c("lightblue", "lightgreen")) 
 
 g  + stat_summary(fun.y=mean, geom="point", size=2, color="red")
+
+# 7. Interpretación
+#Conclusión: Rechazamos la Hipótesis nula (p = 0.041127).
+#Hay evidencia significativa de un cambio en el número de días calurosos. 
+
  
