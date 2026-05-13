@@ -1,18 +1,4 @@
-# Proyecto: Cambio Climático y la comparación de temperaturas de 1948 y 2018
-# Autores: Laura Arrias, Sol Castro y Cristina Peña
 
-# 1. Subir librerías
-install.packages("tidyverse")
-library(tidyverse)
-
-# 2. Subir datos
-# El archivo 'climate70.csv' deber estar en la carpeta 'data'
-datos_clima <- read.csv("climate70.csv") #para que la opción funcione se debe usar la opción "Set Working Directory"
-
-#Vamos a Session
-#Seleccionamos "Set Working Directory" 
-#Seleccionamos "Choose Directory"
-#Escojemos el directorio
 
 # 3. Análisis de los datos
 # Se realiza una preuba de T para muestras pareadas ya que son datos de las mismas localidades pero en diferentes años
