@@ -11,7 +11,7 @@ Este proyecto desarrolla un análisis estadístico reproducible utilizando el le
 
 ### Hipótesis Estadística
 * Hipótesis Nula ($H_0$): No hay diferencia en el promedio de días calurosos entre 1948 y 2018 
-* Hipótesis Alternativa ($H_a$):Existe una diferencia significativa en el promedio de días calurosos entre 1948 y 2018
+* Hipótesis Alternativa ($H_1$): Existe una diferencia significativa en el promedio de días calurosos entre 1948 y 2018
 
 ## 3. Datos
 La base de datos utilizada es climate70, obtenida del repositorio de datos de OpenIntro.
