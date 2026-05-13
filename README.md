@@ -50,7 +50,7 @@ Se aplicó una **Prueba t de Student para muestras pareadas**. Este método es e
 | **2018** | 161.77 | 35.24 |
 
 ### Gráficos
-
+Se generaron gráficos de **Violín** y **Boxplots** para comparar las distribuciones. En ambos umbrales (70°F y 90°F), se observa un desplazamiento ascendente de la media en 2018 respecto a 1948.
 
 ### Interpretación de Resultados
 Tras ejecutar el análisis en R, se obtuvieron los siguientes valores de significancia:
