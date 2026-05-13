@@ -72,5 +72,24 @@ boxplot(DIAS ~ AÑO, data = f_90,
         xlab = "Año",
         ylab = "Días > 90 °F")
 
+# 6. Graficamos un violin 
+p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
+  geom_violin() +
+  labs(title = "Distribución de días >70 °F en 1948 vs 2018",
+       x = "Año", y = "Días > 70°F") +
+  scale_fill_manual(values = c("lightblue", "lightgreen")) 
+
+p  + stat_summary(fun.y=mean, geom="point", size=2, color="red")
+g<-ggplot(f_90, aes(x = AÑO, y = DIAS, fill = AÑO)) +
+  geom_violin() +
+  labs(title = "Distribución de días >90 °F en 1948 vs 2018",
+       x = "Año", y = "Días > 90°F") +
+  scale_fill_manual(values = c("lightblue", "lightgreen")) 
+
+g  + stat_summary(fun.y=mean, geom="point", size=2, color="red")
+
+# 7. Interpretación
+#Conclusión: Rechazamos la Hipótesis nula (p = 0.041127).
+#Hay evidencia significativa de un cambio en el número de días calurosos entre 1948 y 2018
 
  
