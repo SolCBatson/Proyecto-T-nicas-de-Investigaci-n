@@ -51,7 +51,7 @@ Se aplicó una **Prueba t de Student para muestras pareadas**. Este método es e
 
 ### Gráficos
 Se generaron gráficos de **Violín** y **Boxplots** para comparar las distribuciones. En ambos umbrales (70°F y 90°F), se observa un desplazamiento ascendente de la media en 2018 respecto a 1948.
-
+![Un texto que describa la imagen](Gráficos/Boxplot clima 70 1948-2018.tiff)
 ### Interpretación de Resultados
 Tras ejecutar el análisis en R, se obtuvieron los siguientes valores de significancia:
 * **Umbral 70°F:** p-valor = **0.0411**
