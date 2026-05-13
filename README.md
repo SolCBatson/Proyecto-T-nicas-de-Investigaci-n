@@ -10,8 +10,8 @@ Este proyecto desarrolla un análisis estadístico reproducible utilizando el le
 ¿Existe una diferencia estadísticamente significativa en el número de días con temperaturas superiores a los 70 °F en las estaciones meteorológicas seleccionadas entre los años 1948 y 2018?
 
 # Hipótesis
-#Hipótesis nula (H0): No hay diferencia en el promedio de días calurosos entre 1948 y 2018 
-#Hipótesis alternativa (H1): Existe una diferencia significativa en el promedio de días calurosos entre 1948 y 2018
+## Hipótesis nula (H0): No hay diferencia en el promedio de días calurosos entre 1948 y 2018 
+## Hipótesis alternativa (H1): Existe una diferencia significativa en el promedio de días calurosos entre 1948 y 2018
 
 ## 3. Datos
 La base de datos utilizada es climate70, obtenida del repositorio de datos de OpenIntro.
@@ -19,8 +19,8 @@ La base de datos utilizada es climate70, obtenida del repositorio de datos de Op
 # Descripción de la base
 Los datos provienen de una muestra aleatoria de estaciones de monitoreo de la NOAA (National Oceanic and Atmospheric Administration) que cuentan con registros completos para los dos años de interés.
 
-#Detalles del Dataset
-#Observaciones: 197 observaciones (estaciones meteorológicas).
+## Detalles del Dataset
+#### Observaciones: 197 observaciones (estaciones meteorológicas).
 #Variables
 #### station: Identificador de la estación de monitoreo.
 #### latitude / longitude: Ubicación geográfica.
