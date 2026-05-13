@@ -41,9 +41,9 @@ Para este análisis se seleccionaron las variables de temperatura máxima agrupa
 Se aplicó una **Prueba t de Student para muestras pareadas**. Este método es el adecuado cuando las observaciones de ambos grupos están vinculadas entre sí (en este caso, pertenecen a la misma ubicación geográfica). La prueba evalúa si la media de las diferencias individuales entre 2018 y 1948 es significativamente distinta de cero.
 
 ### Hipótesis Estadística
-* **Hipótesis Nula ($H_0$):** $\mu_{d} = 0$ (La diferencia promedio de días calurosos es cero).
-* **Hipótesis Alternativa ($H_a$):** $\mu_{d} \neq 0$ (La diferencia promedio es distinta de cero).
-
+* **Hipótesis Nula ($H_0$):** $\mu_{d} = 0$ (No hay diferencia significativa en el promedio de días calurosos).
+* **Hipótesis Alternativa ($H_a$):** $\mu_{d} \neq 0$ (Existe una diferencia significativa en el promedio de días calurosos).
+  
 ## 5. Resultados e Interpretación
 
 ### Tablas de Resumen
@@ -56,20 +56,18 @@ Se aplicó una **Prueba t de Student para muestras pareadas**. Este método es e
 Se generaron gráficos de **Violín** y **Boxplots** para comparar las distribuciones. En ambos umbrales (70°F y 90°F), se observa un desplazamiento ascendente de la media en 2018 respecto a 1948.
 
 
+### Interpretación de Resultados
+Tras ejecutar el análisis en R, se obtuvieron los siguientes valores de significancia:
+* **Umbral 70°F:** p-valor = **0.0411**
+* **Umbral 90°F:** p-valor = **0.0187**
 
-### Interpretación
-Los resultados de la prueba t arrojaron los siguientes valores:
-* **dx70:** p-valor = **0.0411**
-* **dx90:** p-valor = **0.0187**
-
-Dado que en ambos casos el **p-valor < 0.05**, se rechaza la hipótesis nula con un nivel de confianza del 95%. Esto indica que existe evidencia estadística suficiente para afirmar que el número de días calurosos ha aumentado significativamente en estas estaciones durante los últimos 70 años.
+**Conclusión:** Dado que en ambos casos el **p-valor < 0.05**, se rechaza la hipótesis nula. Existe evidencia estadística suficiente para afirmar que el número de días calurosos aumentó significativamente en estas estaciones entre 1948 y 2018.
 
 ## 6. Reproducibilidad
-Para replicar este análisis en RStudio, siga estos pasos:
+Para correr este proyecto en RStudio:
 
-1. **Clonar el repositorio:** Descargue los archivos o clone el repo desde GitHub.
-2. **Preparar los archivos:** Asegúrese de que el archivo `climate70.csv` esté en el mismo directorio que el script.
-3. **Instalar dependencias:** El script instalará automáticamente `tidyverse` si no está presente.
-4. **Ejecutar:** - Abra el script en RStudio.
-   - Vaya al menú `Session > Set Working Directory > To Source File Location`.
-   - Ejecute todas las líneas de código (`Ctrl + Alt + R`).
+1. **Descargar** el archivo `climate70.csv` y el script de R en la misma carpeta.
+2. **Abrir** RStudio y establecer el directorio de trabajo: `Session > Set Working Directory > To Source File Location`.
+3. **Instalar** la librería necesaria ejecutando: `install.packages("tidyverse")`.
+4. **Ejecutar** el script completo para generar los resultados y gráficos automáticamente.
+
