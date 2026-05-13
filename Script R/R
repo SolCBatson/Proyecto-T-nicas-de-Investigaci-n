@@ -1,6 +1,12 @@
 # Proyecto: Cambio Climático y la comparación de temperaturas de 1948 y 2018
 # Autores: Laura Arrias, Sol Castro y Cristina Peña
 
+#Seteamos el directorio en el que queremos trabajar y tengamos descargada la base de datos
+#Vamos a Session
+#Seleccionamos "Set Working Directory" 
+#Seleccionamos "Choose Directory"
+#Escojemos el directorio
+
 # 1. Librerías
 install.packages("tidyverse")
 library(tidyverse)
