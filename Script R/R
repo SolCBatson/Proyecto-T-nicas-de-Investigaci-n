@@ -62,7 +62,7 @@ boxplot(DIAS ~ AÑO, data = f_70,
         outline = FALSE, 
         las = 1,
         xlab = "Año",
-        ylab = "Días > 70 °F")
+        ylab = "Días > 70 °F",  main = "Distribución de días >70°F en 1948 vs. 2018")
 boxplot(DIAS ~ AÑO, data = f_90,
         notch = TRUE, 
         col = "orange", 
@@ -70,7 +70,7 @@ boxplot(DIAS ~ AÑO, data = f_90,
         outline = FALSE, 
         las = 1,
         xlab = "Año",
-        ylab = "Días > 90 °F")
+        ylab = "Días > 90 °F",  main = "Distribución de días >90°F en 1948 vs. 2018")
 
 # 6. Graficamos un violin 
 p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
