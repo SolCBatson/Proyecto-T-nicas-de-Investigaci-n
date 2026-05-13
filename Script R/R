@@ -54,3 +54,11 @@ resultado_ttest <- t.test(datos_clima$dx70_2018,
 
 print("--- Resultado de la Prueba t para muestras pareadas ---")
 print(resultado_ttest)
+
+# 6. Interpretación
+#Conclusión: Rechazamos la Hipótesis nula (p = 0.041127).
+#Hay evidencia significativa de un cambio en el número de días calurosos. 
+
+
+
+
