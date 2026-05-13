@@ -22,9 +22,9 @@ Los datos provienen de una muestra aleatoria de estaciones de monitoreo de la NO
 #Detalles del Dataset
 #Observaciones: 197 observaciones (estaciones meteorológicas).
 #Variables
-## station: Identificador de la estación de monitoreo.
-## latitude / longitude: Ubicación geográfica.
-## dx70_1948 / dx70_2018: Días con temperatura máxima > 70°F en cada año respectivo.
-## dx90_1948 / dx90_2018: Días con temperatura máxima > 90°F en cada año respectivo.
+#### station: Identificador de la estación de monitoreo.
+#### latitude / longitude: Ubicación geográfica.
+#### dx70_1948 / dx70_2018: Días con temperatura máxima > 70°F en cada año respectivo.
+#### dx90_1948 / dx90_2018: Días con temperatura máxima > 90°F en cada año respectivo.
 
 ### Nota: Dado que los datos comparan la misma unidad experimental (la misma estación) en dos momentos distintos, los datos se consideran dependientes, lo que justifica el uso de una Prueba t para muestras pareadas.
