@@ -38,7 +38,7 @@ datos_clima <- read.csv("climate70.csv")
 
 # 3. Análisis Estadístico (Prueba T Pareada)
 # Error corregido: Se cambió 'datos' por 'datos_clima'
-print("--- PRUEBA T: DÍAS > 70°F ---")
+print("--- PRUEBA T: DÍAS > 70 °F ---")
 t_test_70 <- t.test(datos_clima$dx70_2018, datos_clima$dx70_1948, paired = TRUE)
 print(t_test_70)
 
@@ -62,7 +62,7 @@ boxplot(DIAS ~ AÑO, data = f_70,
         outline = FALSE, 
         las = 1,
         xlab = "Año",
-        ylab = "Días > 70°F")
+        ylab = "Días > 70 °F")
 boxplot(DIAS ~ AÑO, data = f_90,
         notch = TRUE, 
         col = "orange", 
@@ -70,7 +70,7 @@ boxplot(DIAS ~ AÑO, data = f_90,
         outline = FALSE, 
         las = 1,
         xlab = "Año",
-        ylab = "Días > 90°F")
+        ylab = "Días > 90 °F")
 
 # 6. Graficamos un violin 
 p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
@@ -82,7 +82,7 @@ p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
 p  + stat_summary(fun.y=mean, geom="point", size=2, color="red")
 g<-ggplot(f_90, aes(x = AÑO, y = DIAS, fill = AÑO)) +
   geom_violin() +
-  labs(title = "Distribución de días >90 °F en 1948 vs. 2018",
+  labs(title = "Distribución de días >90 °F en 1948 vs 2018",
        x = "Año", y = "Días > 90°F") +
   scale_fill_manual(values = c("lightblue", "lightgreen")) 
 
