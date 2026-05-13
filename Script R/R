@@ -31,7 +31,7 @@ print(t_test_90)
 f_70<- data.frame(AÑO= rep(c("dx70_1948", "dx70_2018"), each = 197), DIAS = c(datos$dx70_1948, datos$dx70_2018))
 f_90<- data.frame(AÑO= rep(c("dx90_1948", "dx90_2018"), each = 197), DIAS = c(datos$dx90_1948, datos$dx90_2018))
 
-#6. #Graficamos un boxplot con los datos 
+# 5. #Graficamos un boxplot con los datos 
 boxplot(DIAS ~ AÑO, data = f_70,
         notch = TRUE, 
         col = "orange", 
@@ -49,7 +49,7 @@ boxplot(DIAS ~ AÑO, data = f_90,
         xlab = "Año",
         ylab = "Días > 90°F")
 
-# 7. Graficamos un violin 
+# 6. Graficamos un violin 
 p<-ggplot(f_70, aes(x = AÑO, y = DIAS, fill = AÑO)) +
   geom_violin() +
   labs(title = "Violin Plot de la distribución de días >70°F en 1948 vs. 2018",
