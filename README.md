@@ -1,13 +1,13 @@
-# Proyecto-T-nicas-de-Investigaci-n
+# Proyecto-Ténicas-de-Investigación
 Proyecto en grupo
 
 # Análisis de Temperaturas Extremas: Comparativa Histórica (1948 vs 2018)
 
 ## 1. Introducción
-Este proyecto desarrolla un análisis estadístico reproducible utilizando el lenguaje R y el entorno RStudio, integrando el control de versiones mediante GitHub. El objetivo central es evaluar cambios en los patrones de temperatura a lo largo de un periodo de 70 años, aplicando buenas prácticas de organización de proyectos científicos y colaboración en parejas.
+Este proyecto analiza la evolución de los días cálidos y extremadamente cálidos utilizando datos de múltiples estaciones meteorológicas. Se comparan dos periodos específicos: el año 1948 y el año 2018, con el objetivo de identificar cambios en la frecuencia de temperaturas altas. Se aplican métodos estadísticos y gráficos que permiten evaluar diferencias significativas y visualizar patrones en los datos.
 
 ## 2. Pregunta de Investigación
-¿Existe una diferencia estadísticamente significativa en el número de días con temperaturas superiores a los 70 °F en las estaciones meteorológicas seleccionadas entre los años 1948 y 2018?
+¿Existe una diferencia estadísticamente significativa en el número de días con temperaturas superiores a los 70 °F y 90°F  en las estaciones meteorológicas seleccionadas entre los años 1948 y 2018?
 
 ### Hipótesis Estadística
 * Hipótesis Nula ($H_0$): No hay diferencia en el promedio de días calurosos entre 1948 y 2018 
