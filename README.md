@@ -3,7 +3,7 @@ Proyecto en grupo
 
 # Análisis de Temperaturas Extremas: Comparativa Histórica (1948 vs 2018)
 
-##1. Introducción
+## 1. Introducción
 Este proyecto desarrolla un análisis estadístico reproducible utilizando el lenguaje R y el entorno RStudio, integrando el control de versiones mediante GitHub. El objetivo central es evaluar cambios en los patrones de temperatura a lo largo de un periodo de 70 años, aplicando buenas prácticas de organización de proyectos científicos y colaboración en parejas.
 
 ## 2. Pregunta de Investigación
