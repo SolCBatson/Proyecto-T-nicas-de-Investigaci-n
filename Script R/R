@@ -27,10 +27,32 @@ t_test_90 <- t.test(datos$dx90_1948, datos$dx90_2018, paired = TRUE)
 print(t_test_90)
 
 
+# 1. Subir librerías
+install.packages("tidyverse")
+library(tidyverse)
+
+# 2. Cargar datos
+# Nota: Si usas RStudio Projects, no necesitas 'Set Working Directory'
+# Asegúrate de que el nombre del archivo coincida exactamente
+datos_clima <- read.csv("climate70.csv") 
+
+# 3. Análisis Estadístico (Prueba T Pareada)
+# Error corregido: Se cambió 'datos' por 'datos_clima'
+print("--- PRUEBA T: DÍAS > 70°F ---")
+t_test_70 <- t.test(datos_clima$dx70_2018, datos_clima$dx70_1948, paired = TRUE)
+print(t_test_70)
+
 # 4. Separamos los datos entre los días que estuvieron a más de 70 y 90 F
 
-f_70<- data.frame(AÑO= rep(c("dx70_1948", "dx70_2018"), each = 197), DIAS = c(datos$dx70_1948, datos$dx70_2018))
-f_90<- data.frame(AÑO= rep(c("dx90_1948", "dx90_2018"), each = 197), DIAS = c(datos$dx90_1948, datos$dx90_2018))
+f_70 <- data.frame(
+  AÑO = rep(c("1948", "2018"), each = 197), 
+  DIAS = c(datos_clima$dx70_1948, datos_clima$dx70_2018)
+)
+
+f_90 <- data.frame(
+  AÑO = rep(c("1948", "2018"), each = 197), 
+  DIAS = c(datos_clima$dx90_1948, datos_clima$dx90_2018)
+)
 
 # 5. #Graficamos un boxplot con los datos 
 boxplot(DIAS ~ AÑO, data = f_70,
