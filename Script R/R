@@ -5,8 +5,52 @@
 install.packages("tidyverse")
 library(tidyverse)
 
-# 2. Importar datos
-# El archivo 'climate70.csv' debe estar en la carpeta 'data'
-datos_clima <- read.csv("climate70.csv") #para que esta línea funcione se debe usar la opción "Set Working Directory" en R
+# 2. Subir datos
+# El archivo 'climate70.csv' deber estar en la carpeta 'data'
+datos_clima <- read.csv("climate70.csv") #para que la opción funcione se debe usar la opción "Set Working Directory"
 
+# 3. Análisis de los datos
+# Se calcula la diferencia por cada estación
+datos_clima <- datos_clima %>%
+  mutate(diferencia_70 = dx70_2018 - dx70_1948)
 
+# Se utiliza mutate() para calcular la diferencia individual por estación.
+# Esto es esencial para la Prueba t pareada, ya que el análisis se basa en la distribución de estas diferencias
+
+resumen <- datos_clima %>%
+  summarise(
+    media_1948 = mean(dx70_1948),
+    media_2018 = mean(dx70_2018),
+    media_dif = mean(diferencia_70),
+    n = n()
+  )
+print(resumen)
+
+# 4. Visualizar los datos
+
+# Creamos un gráfico de cajas (boxplot) para comparar los dos años
+# Primero pasamos los datos a formato "largo" (long format)
+datos_long <- datos_clima %>%
+  pivot_longer(cols = c(dx70_1948, dx70_2018), 
+               names_to = "anio", 
+               values_to = "dias_calor")
+
+ggplot(datos_long, aes(x = anio, y = dias_calor, fill = anio)) +
+  geom_boxplot(alpha = 0.4) +
+  scale_x_discrete(labels = c("dx70_1948" = "1948", "dx70_2018" = "2018")) +
+  labs(title = "Comparación de días por encima de 70°F",
+       x = "Año de observación",
+       y = "Número de días > 70 °F",
+       fill = "Año") +
+  theme_minimal()
+
+# 5. Prueba t para muestras pareadas (Paired T-Test)
+# H0: La diferencia de medias entre 2018 y 1948 es igual a 0.
+# H1: La diferencia de medias es distinta de 0.
+
+resultado_ttest <- t.test(datos_clima$dx70_2018, 
+                          datos_clima$dx70_1948, 
+                          paired = TRUE)
+
+print("--- Resultado de la Prueba t para muestras pareadas ---")
+print(resultado_ttest)
